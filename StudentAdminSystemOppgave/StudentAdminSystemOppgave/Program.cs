@@ -1,24 +1,39 @@
 ﻿using StudentAdminSystemOppgave;
 
 Console.WriteLine("OPPGAVE: Studentadministrasjons system");
-var Student = new Student();
-var Karakter = new Karakter();
-var Fag = new Fag();
+
+List<int> existingStudentIds = new List<int>();
+List<Fag> AlleFag = new List<Fag>
+{
+    new Fag ( "IT101", "Introduksjon til IT utvikling", 30 ),
+    new Fag ( "ST101", "How to become a successful sock thief", 10 ),
+    new Fag ( "BA201", "Kneading 101", 40 ),
+};
+
 
 Main();
 
 
 void Main()
 {
-    var existingStudentIds = new List<int>();
-
-    var student1 = new Student {StudentName = "Bethina S. M", StudentAge = 28, StudieProgram = "IT utvikling", StudentID = Student.GetStudentId(existingStudentIds) };
-    var student2 = new Student {StudentName = "Oscar Katt", StudentAge = 1, StudieProgram  = "Couch Destroying 101", StudentID = Student.GetStudentId(existingStudentIds)};
-    var student3 = new Student { StudentName = "Kairo Katt", StudentAge = 2, StudieProgram = "Baking", StudentID = Student.GetStudentId(existingStudentIds) };
-
-
-    var fag1 = new Fag();
+    // Studenter
+    var student1 = new Student ("Bethina S. M", 28, "IT utvikling", GetStudentId(), new List<Fag> { AlleFag[0], AlleFag[1] }, new List<Karakter>{new Karakter(AlleFag[0], 3.5), new Karakter(AlleFag[1], 4.1)});
+    var student2 = new Student ("Oscar Katt", 1,"Sock Theft 101", GetStudentId());
+    var student3 = new Student ("Kairo Katt", 2, "Baking", GetStudentId());
+    
 }
 
+int GetStudentId()
+{
+    Random rand = new Random();
+    int randomId = rand.Next(1, 501); // gir en id
 
+    while (existingStudentIds.Contains(randomId)) // sjekker om id allerede eksisterer
+    {
+        randomId = rand.Next(1, 501); // gir ny id om nødvendig
+    }
+
+    existingStudentIds.Add(randomId); // legger til den nye id i listen
+    return randomId;
+}
 

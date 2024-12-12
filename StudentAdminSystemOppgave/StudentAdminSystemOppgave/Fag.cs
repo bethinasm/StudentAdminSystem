@@ -10,15 +10,15 @@ namespace StudentAdminSystemOppgave
     internal class Fag
     {
         public string FagNavn { get; set; }
-        public int FagKode { get; set; }
+        public string FagKode { get; set; }
         public int StudiePoeng { get; set; }
 
-        /*public Fag(string name, int code, int points)
+        public Fag(string name, string code, int points)
         {
             FagNavn = name;
             FagKode = code;
             StudiePoeng = points;
-        }*/
+        }
 
         public void PrintInfo()
         {

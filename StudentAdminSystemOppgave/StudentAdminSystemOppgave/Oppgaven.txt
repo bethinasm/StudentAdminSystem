@@ -10,19 +10,19 @@
    
     1. Student:
    
-        - Egenskaper: Navn, Alder, Studieprogram, StudentID.
-        - Metode: SkrivUtInfo() som skriver ut informasjon om studenten.
+       X    - Egenskaper: Navn, Alder, Studieprogram, StudentID.
+       X    - Metode: SkrivUtInfo() som skriver ut informasjon om studenten.
 
     2. Fag:
    
-        - Egenskaper: Fagkode, Fagnavn, AntallStudiepoeng.
-        - Metode: SkrivUtInfo() som skriver ut informasjon om faget.
+       X    - Egenskaper: Fagkode, Fagnavn, AntallStudiepoeng.
+       X    - Metode: SkrivUtInfo() som skriver ut informasjon om faget.
 
     3. Karakter:
    
-        - Egenskaper: Student (referanse til en Student), 
-          Fag (referanse til et Fag), Karakterverdi.
-        - Metode: SkrivUtInfo() som skriver ut informasjon om karakteren.
+        X   - Egenskaper: Student (referanse til en Student), 
+        X   - Fag (referanse til et Fag), Karakterverdi.
+           - Metode: SkrivUtInfo() som skriver ut informasjon om karakteren.
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -58,3 +58,8 @@
 
         - Implementer en metode i Student-klassen som beregner totalt antall 
           studiepoeng basert på fagene studenten tar.
+
+
+
+
+          - Endre fra public til private på det som gir mening
