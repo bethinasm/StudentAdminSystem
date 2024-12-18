@@ -20,9 +20,12 @@ namespace StudentAdminSystemOppgave
             StudiePoeng = points;
         }
 
-        public void PrintInfo()
+        public void PrintInfo(List<Fag> faglista)
         {
-            Console.WriteLine($"Fag: {FagNavn}\nFagkode: {FagKode}\nStudiepoeng: {StudiePoeng}");
+            foreach (Fag item in faglista)
+            {
+                Console.WriteLine($"- Fag: {FagNavn}\nFagkode: {FagKode}\nStudiepoeng: {StudiePoeng}");
+            }
         }
     }
     

@@ -8,8 +8,8 @@ namespace StudentAdminSystemOppgave
 {
     internal class Karakter
     {
-        public Fag Fag { get; set; }
-        public double KarakterTall { get; set; }
+        public Fag Fag { get; private set; }
+        public double KarakterTall { get; private set; }
 
         public Karakter(Fag fagNavn, double tall)
         {
