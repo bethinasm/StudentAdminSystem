@@ -30,9 +30,9 @@
     Hovedprogram (Main)
     I hovedprogrammet, gjør følgende:
 
-    1. Opprett minst to instanser av hver klasse (Student, Fag, Karakter).
-    2. Sett verdier for egenskapene.
-    3. Kall SkrivUtInfo()-metoden for hver klasse for å skrive ut informasjonen.
+    X   1. Opprett minst to instanser av hver klasse (Student, Fag, Karakter).
+        2. Sett verdier for egenskapene.
+        3. Kall SkrivUtInfo()-metoden for hver klasse for å skrive ut informasjonen.
 
 -------------------------------------------------------------------------------------------------------------
 
