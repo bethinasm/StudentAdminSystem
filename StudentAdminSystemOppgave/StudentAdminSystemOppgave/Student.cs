@@ -31,7 +31,6 @@ namespace StudentAdminSystemOppgave
             Console.WriteLine($"Student ID: {_studentID} \nStudentens navn: {StudentName}\nAlder: {StudentAge}\nStudie: {StudieProgram}");
         }
 
-
         public double BeregnGjennomsnittKarakter()
         {
             // tar inn alle karakterer og deler de på antall fag
